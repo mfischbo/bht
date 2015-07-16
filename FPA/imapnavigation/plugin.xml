@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               closeable="false"
+               id="de.bht.fpa.mail.s780486.imapnavigation.view1"
+               minimized="false"
+               relationship="stack"
+               relative="de.bht.fpa.mail.s780486.main.perspective.left">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="de.bht.fpa.mail.s780486.imapnavigation.ImapView"
+            id="de.bht.fpa.mail.s780486.imapnavigation.view1"
+            name="Imap Navigation"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="de.bht.fpa.mail.s780486.imapnavigation.category1"
+            name="IMAP">
+      </category>
+      <command
+            categoryId="de.bht.fpa.mail.s780486.imapnavigation.category1"
+            id="de.bht.fpa.mail.s780486.imapnavigation.commands.synchronizeIMAP"
+            name="Synchronize">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="de.bht.fpa.mail.s780486.imapnavigation.handlers.SynchronizeHandler"
+            commandId="de.bht.fpa.mail.s780486.imapnavigation.commands.synchronizeIMAP">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="de.bht.fpa.mail.s780486.imapnavigation.commands.synchronizeIMAP"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="de.bht.fpa.mail.s780486.imapnavigation.menus.sampleMenu"
+               label="IMAP Navigation"
+               mnemonic="M">
+            <command
+                  commandId="de.bht.fpa.mail.s780486.imapnavigation.commands.synchronizeIMAP"
+                  id="de.bht.fpa.mail.s780486.imapnavigation.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="de.bht.fpa.mail.s780486.imapnavigation.toolbars.sampleToolbar">
+            <command
+                  commandId="de.bht.fpa.mail.s780486.imapnavigation.commands.synchronizeIMAP"
+                  icon="icons/sample.gif"
+                  id="de.bht.fpa.mail.s780486.imapnavigation.toolbars.sampleCommand"
+                  tooltip="Say hello world">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

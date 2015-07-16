@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Beuth Phonebook Server Search - 780486 Markus Fischb&ouml;ck</title>
+	<meta charset="UTF-8"/>
+</head>
+<body>
+	Welcome to the Beuth Phonebook Service.<br/>
+	Please enter your query below<br/>
+
+	<br/>
+	<br/>
+	<h2>Search</h2>
+	<form action="./search.html" method="GET">
+		<label>Name</label><br/>
+		<input type="text" name="name" value=""/><br/><br/>
+		
+		<label>Number</label><br/>
+		<input type="text" name="number" value=""/><br/><br/>
+		<input type="submit" name="null" value="Search"/>
+	</form>
+	<br/>
+	<br/>
+	
+	<h2>Results</h2>
+	{searchResult}
+	<br/>
+	<br/>
+
+	<a href="{backRef}">Zur&uuml;ck</a>
+	<a href="/server/shutdown/">Quit Server</a>
+</body>
+</html>

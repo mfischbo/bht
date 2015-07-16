@@ -1,0 +1,65 @@
+body {
+     background-color: white;
+     font-family: Arial,Helvetica;
+     margin: 0px;
+     padding: 0px;
+}
+
+h3 {
+     color: #000055;
+     font-size: 14px;
+}
+
+#page {
+     margin: 0px;
+     padding-top: 50px;
+     position: relative;
+     width: 100%;
+}
+
+#center {
+     margin: auto;
+     width: 800px;
+}
+
+.btnContainer {
+     float: left;
+}
+
+#error {
+     background-color: red;
+     color: white;
+     display: none;
+     font-weight: bold;
+}
+
+#drawing_area {
+     border-color: #C3C3C3;
+     border-style: dashed;
+     border-width: 1px;
+     float: left;
+}
+
+#param_area {
+     border-color: #C3C3C3;
+     border-style: dashed;
+     border-width: 1px;
+     float: left;
+     height: 400px;
+     text-align: left;
+     width: 200px;
+}
+
+input {
+     width: 130px;
+    margin-left:8px;
+}
+
+label {
+    margin-left:8px;
+    font-size:12px;
+}
+
+.clearfix {
+     clear: both;
+}
